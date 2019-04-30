@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Title</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/uikit.min.css" />
+  <script src="js/uikit.min.js"></script>
+  <script src="js/uikit-icons.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-123449308-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-123449308-1');
+</script>
+
+</head>
+
+<body>
+
+  <header>
+    <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
+
+      <nav class="uk-navbar uk-margin" style="background-color: #fff;border-bottom: 1px solid #ddd;">
+        <div class="uk-navbar-left">
+
+          <a class="uk-navbar-item uk-logo" href="#">नमस्ते गांव</a>
+          <a class="uk-icon-button uk-margin-small-right" style="color: #000" href="http://www.namastegaon.in" uk-icon="home"></a>
+
+
+
+
+        </div>
+        
+      </nav>
+
+    </div>
+  </header>
+
+
+  <main id="main">
+
+
+    <div class="uk-card uk-card-default uk-width-1-2@m uk-align-center" style="margin-top: 2%;margin-bottom: 20px;">
+    <div class="uk-card-header">
+        <div class="uk-grid-small uk-flex-middle" uk-grid>
+            <div class="uk-width-auto">
+                <img class="uk-border-circle" width="40" height="40" src="imgs/live.gif">
+            </div>
+            <div class="uk-width-expand" >
+                <h3 class="uk-card-title uk-margin-remove-bottom" id="channel-name">आज तक</h3>
+            </div>
+        </div>
+    </div>
+    <div class="uk-card-body" style="padding: 0;">
+    <iframe id="myFrame"  src="https://www.youtube-nocookie.com/embed/dksJDK9RvSs?autoplay=1&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;playsinline=0" width="840" height="473" frameborder="0" allowfullscreen uk-responsive uk-video="automute: false"></iframe>
+    </div>
+    <div class="uk-card-footer">
+        <a class="uk-icon-button uk-margin-small-right " style="color: #000" onclick="reload()" uk-icon="refresh"></a>
+        <a href="#modal-sections" class="uk-button uk-background-muted uk-button-small uk-align-right" uk-toggle><span class="uk-margin-small-right" uk-icon="pencil"></span>चैनल बदले </a>
+
+    </div>
+</div>
+
+
+<div class="uk-align-center uk-margin-small uk-margin-large-bottom">
+  <center>
+  <img class="uk-border-circle uk-margin-small" src="imgs/News18_raj.jpg" width="90" height="90" onclick="changeUrlofIframe('न्यूज़ 18 राजस्थान','fh3lxo7gvc0')" style="border: #888 solid 1px;" alt="Border circle">
+ <img class="uk-border-circle uk-margin-small" src="imgs/abp.jpg" width="90" height="90" onclick="changeUrlofIframe('एबीपी न्यूज','_y_nOaLQihs')"  style="border: #888 solid 1px;" alt="Border circle">
+ <img class="uk-border-circle uk-margin-small" src="imgs/dd_news.jpg" width="90" height="90"  onclick="changeUrlofIframe('डीडी न्यूज़','TBdoVN3jkfo')" style="border: #888 solid 1px;" alt="Border circle">
+ <br/>
+ <a href="#modal-sections" class="uk-button uk-button-primary uk-button-small" uk-toggle><span class="uk-margin-small-right" uk-icon="list"></span>अन्य चैनल (8)</a>
+</center>
+
+</div>
+
+
+
+
+
+<div id="modal-sections" uk-modal>
+    <div class="uk-modal-dialog">
+
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+
+        <div class="uk-modal-header">
+            <h3 class="uk-text-lead">कोई चैनल चुनें</h3>
+        </div>
+
+        <div class="uk-modal-body" uk-overflow-auto>
+ <center>
+           
+
+             <div>
+
+                <div class="uk-inline" onclick="changeUrlofIframe('आज तक','dksJDK9RvSs')" style="margin:6px;border-radius: 16px;">
+                    <img src="imgs/aajtak_medium.jpg" alt="aaj tak">
+                    <div class="uk-overlay uk-overlay-primary uk-position-bottom">
+                            <p class="uk-text-lead">आज तक</p>
+                    </div>
+                </div>
+
+            </div>
+
+             <div>
+
+                <div class="uk-inline" onclick="changeUrlofIframe('न्यूज़ 18 राजस्थान','fh3lxo7gvc0')" style="margin:6px;border-radius: 16px;">
+                    <img src="imgs/News18_raj.jpg" alt="न्यूज़ 18 राजस्थान">
+                    <div class="uk-overlay uk-overlay-primary uk-position-bottom">
+                            <p class="uk-text-lead">न्यूज़ 18 राजस्थान</p>
+                    </div>
+                </div>
+
+            </div>
+
+ <div>
+
+                <div class="uk-inline" onclick="changeUrlofIframe('इंडिया टी.वी.','whFfJqxUuwA')" style="margin:6px;border-radius: 16px;">
+                    <img src="imgs/indiatv.jpg" alt="india tv">
+                    <div class="uk-overlay uk-overlay-primary uk-position-bottom">
+                            <p class="uk-text-lead">इंडिया टीवी</p>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div>
+
+                <div class="uk-inline" onclick="changeUrlofIframe('एबीपी न्यूज','_y_nOaLQihs')" style="margin:6px;border-radius: 16px;">
+                    <img src="imgs/abp.jpg" alt="abp news">
+                    <div class="uk-overlay uk-overlay-primary uk-position-bottom">
+                            <p class="uk-text-lead">एबीपी न्यूज</p>
+                    </div>
+                </div>
+
+            </div>
+
+             <div>
+
+                <div class="uk-inline" onclick="changeUrlofIframe('आज तक','dksJDK9RvSs')" style="margin:6px;border-radius: 16px;">
+                    <img src="imgs/aajtak_medium.jpg" alt="aaj tak">
+                    <div class="uk-overlay uk-overlay-primary uk-position-bottom">
+                            <p class="uk-text-lead">आज तक</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div>
+
+                <div class="uk-inline" onclick="changeUrlofIframe('न्यूज़ 18','_StL8uNtzdo')" style="margin:6px;border-radius: 16px;">
+                    <img src="imgs/news18.jpg" alt="news 18">
+                    <div class="uk-overlay uk-overlay-primary uk-position-bottom">
+                            <p class="uk-text-lead">न्यूज़ 18</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div>
+
+                <div class="uk-inline" onclick="changeUrlofIframe('डीडी न्यूज़','TBdoVN3jkfo')" style="margin:6px;border-radius: 16px;">
+                    <img src="imgs/dd_news.jpg" alt="डीडी न्यूज़">
+                    <div class="uk-overlay uk-overlay-primary uk-position-bottom">
+                            <p class="uk-text-lead">डीडी न्यूज़</p>
+                    </div>
+                </div>
+
+            </div>
+
+
+  <div>
+
+                <div class="uk-inline" onclick="changeUrlofIframe('राज्यसभा टीवी','jVFLkbOYYds')" style="margin:6px;border-radius: 16px;">
+                    <img src="imgs/rajya_sabhatv.jpg" alt="राज्यसभा टीवी">
+                    <div class="uk-overlay uk-overlay-primary uk-position-bottom">
+                            <p class="uk-text-lead">राज्यसभा टीवी</p>
+                    </div>
+                </div>
+
+            </div>
+ 
+ <div>
+
+                <div class="uk-inline" onclick="changeUrlofIframe('TV9 भारतवर्ष','wwgvFkAkpf0')" style="margin:6px;border-radius: 16px;">
+                    <img src="imgs/bharatvarsh_.jpg" alt="TV9 भारतवर्ष">
+                    <div class="uk-overlay uk-overlay-primary uk-position-bottom">
+                            <p class="uk-text-lead">TV9 भारतवर्ष</p>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+</center>
+
+           
+        </div>
+
+        <div class="uk-modal-footer uk-text-right">
+            <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
+        </div>
+
+    </div>
+</div>
+  </main>
+
+  <script type="text/javascript">
+
+    var link =  document.getElementById("myFrame").src;
+function changeUrlofIframe( b,a ) {
+  UIkit.modal("#modal-sections").hide();
+
+  link = "https://www.youtube-nocookie.com/embed/"+a+"?autoplay=1&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;playsinline=1"; 
+  document.getElementById("myFrame").src = link;
+  document.getElementById("channel-name").innerHTML = b;
+  window.location.hash = '#main'
+}
+
+function reload(){
+  document.getElementById("myFrame").src = document.getElementById("myFrame").src;
+
+}
+</script>
+
+  <footer class="footer uk-background-secondary uk-padding">
+ <div uk-grid> <div class="uk-width-1-4@m uk-margin-bottom"> </div> <div class="uk-width-1-4@m"> <img src="https://lh3.googleusercontent.com/QmTZzxTDTlsLPzPZqhQERrYZp5af7C0LQR7wBBFHTcPyPtiAIdrgmOInKzw6sRZ2c1oAuIlQiaOW-rd03lH5fVLLO8NqFz4x7qBUIvFu667FjZ5MqHKdRBWNStWbMsvNr6F1Kknp-w=w1366-h768-no" width="180"/><br/><a href="https://www.instagram.com/namastegaon/" class="uk-icon-button uk-margin-small-right" uk-icon="instagram"></a> <a href="https://www.facebook.com/namastegaon" class="uk-icon-button uk-margin-small-right" uk-icon="facebook"></a> <a href="https://api.whatsapp.com/send?phone=917976333276&text=%E0%A4%AE%E0%A5%81%E0%A4%9D%E0%A5%87%20%E0%A4%A8%E0%A4%AE%E0%A4%B8%E0%A5%8D%E0%A4%A4%E0%A5%87%20%E0%A4%97%E0%A4%BE%E0%A4%82%E0%A4%B5%20%E0%A4%B8%E0%A5%87%20%E0%A4%9C%E0%A5%8B%E0%A5%9C%E0%A5%87%E0%A4%82" class="uk-icon-button" uk-icon="whatsapp"></a> </div> <div class="uk-width-1-4@m"> <ul class="uk-list "> 
+  <li><a href="https://www.namastegaon.in" style="color:#eee">होम</a></li>
+ <li><a href="https://play.google.com/store/apps/details?id=com.namastegaon" style="color:#eee">ऐप डाउनलोड करे</a></li> </ul> </div> <div class="uk-width-1-4@m"> </div> </div> <div uk-grid> </div> <div class="uk-text-center" style="color:white;"> <strong>ALL COPYRIGHT © RESERVED 2019</strong> </div> 
+  </footer>
+
+</body>
+
+</html>
